@@ -1,5 +1,5 @@
 #! -*- coding:utf-8 -*-
-
+#https://www.cnblogs.com/songqingbo/p/5126957.html
 str = "self_learn"
 print(type(str))
 str.title()
@@ -42,8 +42,16 @@ print(str.split(" "))  #返回字符串以什么分隔符
 print(str.ljust(100,"0"))   #设置长度右边补充
 print(str.rjust(100,"r"),)  #设置长度左边补充
 print(str.zfill(50))        #设置长度，左边默认补充0
-print(str.isdecimal())
-str="33.3"
+str="keyvalue"
 print(str.isdecimal())  #只有十进制字符，则返回true，否则为假。
 print(str.isdigit())    #如果S中的所有字符都是数字，则为真。在S中至少有一个字符，否则为false。
+print("*".join(str))    #以指定字符链接
+str="\tab"
+print(str.isprintable()) #判断字符串中所有字符是否都属于可见字符
+str="dddd23423"
+print(str.isalnum())     #检查判断字符串是否包含字母数字字符
+print(str.isalpha())     #检测字符串是否只由字母组成
+str="d3d3"
+print(str.isdigit())      #检测字符串是否只由数字组成
+print(str.isidentifier()) #检测字符串是否是字母开头
 
