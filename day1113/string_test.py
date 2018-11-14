@@ -55,3 +55,4 @@ str="d3d3"
 print(str.isdigit())      #检测字符串是否只由数字组成
 print(str.isidentifier()) #检测字符串是否是字母开头
 
+
