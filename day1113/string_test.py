@@ -1,5 +1,14 @@
 #! -*- coding:utf-8 -*-
 #https://www.cnblogs.com/songqingbo/p/5126957.html
+#功能：格式化输出字符串
+li = 'I\'m {},{}'  # 两个'{}'是占位符
+li.format('swht', '欢迎来中国')
+#返回结果："I'm swht,欢迎来中国"
+#参考：http: // blog.chinaunix.net / uid - 23802873 - id - 4477364.html
+str="23232323ffff6"
+print(str.capitalize())   #将字符串第一个字母大写
+print(str.find("f",7,12))    #返回字符串的位置，如有重复，则返回最小的index
+
 str = "self_learn"
 print(type(str))
 str.title()
@@ -23,7 +32,7 @@ str = "Self_Learn"
 print(str.upper())  # 全部转换为大写
 print(str.istitle())  # 判断英文首字母是否大写
 print(str.endswith("N"))   #是否以指定字符串结尾是，返回True
-print(str.capitalize())   #字符串第一个字母大写，其它的小写
+
 
 str = "  Self_ Learn      "
 print(str.lstrip())   #省略左边的空格
@@ -54,5 +63,19 @@ print(str.isalpha())     #检测字符串是否只由字母组成
 str="d3d3"
 print(str.isdigit())      #检测字符串是否只由数字组成
 print(str.isidentifier()) #检测字符串是否是字母开头
+
+
+print(str.isdigit())      #检测字符串是否只由数字组成
+print(str.isidentifier()) #检测字符串是否是字母开头
+str="\tab"
+print(str.expandtabs(1))   #tab键以空格返回，默认为8个
+print(str.startswith("\t"))# 是否以什么字母开头，是则返回true
+
+str="lalALKDF"
+print(str.lower())   #大写变为小写
+print(str.partition("a"))  #以指定分隔符分开
+str="AKLSDJF"
+print(str.casefold())  #功能：将字符串中所有的大写字母转换成小写字母
+print(str.index("K"))   #返回字符串的索引
 
 
