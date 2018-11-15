@@ -1,4 +1,4 @@
-#! -*- coding:utf-8 -*-
+ #! -*- coding:utf-8 -*-
 dict2={"height":100,"colour":"red"}
 for i,value in dict2.items():  #items() 方法以列表返回可遍历的(键, 值) 元组数组。
     print(dict2.items())
