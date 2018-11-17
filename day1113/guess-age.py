@@ -13,6 +13,13 @@ while count < 3:
             print("think smaller")
         elif age_of_old == age:
             print("right")
+            break
         count += 1
+        if count==3:
+            continue_confirm=input("do you want have a try:")
+            if continue_confirm!="n":
+                count=0
 else:
-    print("have try three times")
+   print("have try three times,do you want to try again")
+
+
