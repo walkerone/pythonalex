@@ -12,14 +12,11 @@ while count < 3:
     account_input = input("input your account:")
     password_input = input("input the account\'s password")
     with open("login_name", "r") as accounts_file, open("lock_account", "r+") as lock_account:
-        print(lock_account.read())
         lock_account_name = lock_account.read()
-        print(lock_account.tell())
-        print(lock_account_name)
         for account_input1 in lock_account_name.split():
             print(lock_account_name.split())
-            if account_input1.strip()==account_input:
-                flag=True
+            if account_input1.strip() == account_input:
+                flag = True
                 break
         accounts = accounts_file.readlines()
         for account in accounts:
@@ -28,12 +25,14 @@ while count < 3:
             password = password.strip()
             if name == account_input and password == password_input:
                 print("welcome to my family")
-                flag=True
+                flag = True
                 break
-    count += 1
+            else:
+                print("valid account or wrong password")
+                break
     if flag:
         break
+    count += 1
 else:
-    with open("lock_account","a+") as lock_account:
-        lock_account.write("\n"+account_input)
-
+    with open("lock_account", "a+") as lock_account:
+        lock_account.write("\n" + account_input)
