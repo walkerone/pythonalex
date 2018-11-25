@@ -1,4 +1,12 @@
 # -*- coding:utf-8 -*-
+"""
+用户入口
+商品信息存在文件里
+已购商品，余额记录
+
+商家入口
+可以添加商品，修改商品价格
+"""
 product_list = [
     ('Iphone', 5800),
     ('Mac Pro', 9800),
@@ -22,12 +30,12 @@ if salary.isdigit():
                 p_item = product_list[user_choice]
                 if p_item[1] < salary:
                     print("买得起呀")
-                    shopping_list.append(p_item)
+                    shopping_list=shopping_list.append(p_item)
                     salary -= p_item[1]
                     print("Added %s into shopping cart,your current balance is \033[31;1m%s\033[0m" % (p_item, salary))
                     print("added %s into shopping cart,your current balance is\033[31;1m%s\033[0m" % (p_item, salary))
                 else:
-                    print("你的金额只剩\033[31;1m%s\033[0m" % salary)
+                    print("你的金额只剩\033[31;1m%s\033[0m买不起了" % salary)
             else:
                 print("produce \033[31:m code\033[0:m is not here")
         elif user_choice == "q":
