@@ -1,4 +1,5 @@
 # -*- coding:utf-8 -*-
+<<<<<<< HEAD
 import sys,os
 import copy
 """print(sys.argv) #打印环境变量
@@ -31,3 +32,21 @@ def merchant(name=None,price=None,add_product=None):
 old="'Iphone' 580"
 new="Iphone 9999"
 merchant(name="Iphone",price=66666, add_product="add_productone")
+=======
+# import
+f=open("haproxy","r")
+f_nes=open("haproxy_new","w")
+b=f.readlines()
+option=("1、请输入搜索的地址：","2、请输入增加的内容：","3、请输入删除的内容：")
+for i in option:
+    print(i)
+choice=input("请选择操作方式:序列号》》")
+if choice==1:
+    data=input("请输入搜索地址：")
+    address="backend %s\n" %data
+    if address in b:
+        index_add=b.index(address)
+        print(b[index_add],b[index_add+1])
+    if address not in b:
+        print("你查找的内容不存在")
+>>>>>>> f079b2bfd736be6bab72318fef3c002f57806160
