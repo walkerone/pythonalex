@@ -1,6 +1,4 @@
 # -*- coding:utf-8 -*-
-<<<<<<< HEAD
-import sys,os
 import copy
 """print(sys.argv) #打印环境变量
 # print(sys.argv[2])# 取出第几个参数
@@ -49,4 +47,3 @@ if choice==1:
         print(b[index_add],b[index_add+1])
     if address not in b:
         print("你查找的内容不存在")
->>>>>>> f079b2bfd736be6bab72318fef3c002f57806160

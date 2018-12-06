@@ -32,4 +32,3 @@ if salary.isdigit():
             user_choice = int(user_choice)
             if user_choice < len(product_list) and use_choice > 0:
                p_item=product_list[user_choice]
-               if
