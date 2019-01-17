@@ -2,7 +2,9 @@
 import time
 import sys
 
+from ..  import  day1113 as bao
 
+bao.mc()
 
 # def timer(func):
 #     def deco():
@@ -35,7 +37,7 @@ def timer(func):   #被装饰函数有参数
 @timer
 def atest(name):
     print (name)
-    time.sleep(2)
+    time.sleep(0.1)
     print ("\n这个是test")
 atest("walkerone")
 
@@ -84,3 +86,57 @@ a=(x**x for x in range(10))
 
 for i in a:
     print(i)
+
+
+print("--------")
+def fib(max):
+    n,a,b=0,0,1
+    while n<max:
+        yield b
+        a,b=b,a+b
+        n=n+1
+    return 'done'
+
+data=fib(5)
+while True:
+    try:
+        print(data.__next__())
+    except StopIteration as e :
+        print(e.value)
+        break
+
+
+#_*_coding:utf-8_*_
+__author__ = 'Alex Li'
+
+# import time
+# def consumer(name):
+#     print("%s 准备吃包子啦!" %name)
+#     while True:
+#        baozi = yield
+#
+#        print("包子[%s]来了,被[%s]吃了!" %(baozi,name))
+#
+#
+# def producer(name):
+#     c = consumer('A')
+#     c2 = consumer('B')
+#     c.__next__()
+#     c2.__next__()
+#     print("老子开始准备做包子啦!")
+#     for i in range(10):
+#         time.sleep(1)
+#         print("做了2个包子!")
+#         c.send(i)
+#         c2.send(i)
+#
+# producer("alex")
+
+# 通过生成器实现协程并行运算
+
+from collections import Iterable
+a=[1,2,3,4,5,6]
+print(isinstance(a,Iterable))
+print("33333333333333333")
+
+
