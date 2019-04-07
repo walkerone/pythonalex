@@ -11,6 +11,12 @@ class School(object):
     def hire(self,staff_obj):
         print("%s 老师注册成功"% staff_obj.name)
         self.staffs.append(staff_obj)
+
+    def create_currium(self,currium_obj):
+        currium_obj.learn()
+
+    def create_gradge(self):
+        
 class SchoolMember(object):
     def __init__(self,name,age,sex):
         self.name=name
@@ -55,7 +61,26 @@ class Students(SchoolMember):
     def pay_tution(self,aoount):
         print("%s is pay %s"% (self.name,aoount))
 
-school=School("老男孩IT","沙河")
+class Curriculum(object):
+    def __init__(self,type,cycle,price):
+        self.type=type
+        self.cycle=cycle
+        self.print=price
+    def learn(self):
+        print("this is %s " % self.type)
+class Gradge(object):
+    def __init__(self):
+        pass
+    def teach(self,teach_obj,curriculum_obj):
+        print("%s is teacht at this gradge %s" % (teach_obj.name,curriculum_obj.type))
+
+
+school_1=School("老男孩IT","北京")
+school_2=School("老男孩IT","北京")
+school_3=School("老男孩IT","上海")
+
+
+
 t1=Teacher("oldboy","55","MF",20000,"Linux")
 t2=Teacher("Alex","30","MF",3000,"PythonDevelops")
 s1=Students("chengronghua","30","MF",1001,"PythonDevelops")
@@ -63,12 +88,12 @@ s2=Students("梁伟","30","MF",1001," Linux")
 
 t1.tell()
 s1.tell()
-school.entroll(s1)
-school.entroll(s2)
-school.hire(t1)
-print(school.students[0])
-print(school.staffs[0])
-school.staffs[0].teach()
-
-for i in school.students:
-    i.pay_tution(500)
+# school.entroll(s1)
+# school.entroll(s2)
+# school.hire(t1)
+# print(school.students[0])
+# print(school.staffs[0])
+# school.staffs[0].teach()
+#
+# for i in school.students:
+#     i.pay_tution(500)
