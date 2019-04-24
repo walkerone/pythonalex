@@ -1,5 +1,6 @@
 # -*- coding:utf-8 -*-
 import  socket
+import os
 server=socket.socket()
 server.bind(('localhost',6969))
 server.listen()
@@ -12,8 +13,11 @@ while True:
     if not data:
         print("client have lost")
         break
-    print('recv',data.decode())
-    conn.send(data.upper())
+    print(data.decode('utf-8'))
+    data=os.popen(data.decode('utf-8'))  #popen执行命令
+    res=data.read()
+    conn.send(res.encode())
+    conn.sendall() #相当于for 循环进行send
 server.close()
 
 
